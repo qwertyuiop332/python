@@ -1,0 +1,86 @@
+#1 task
+matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+
+print("matrix:")
+for row in matrix:
+    print(row)
+
+odd_numbers = []
+even_count = 0
+
+for row in matrix:
+    for num in row:
+        if num % 2 == 0:
+            even_count += 1
+        else:
+            odd_numbers.append(str(num))
+
+print("\nнечётные числа matrix:")
+print("".join(odd_numbers))
+
+print(f"\nкол-во чётных: {even_count}")
+# 2 task
+matrix_1 = [[2, 4, 3, 6], [5, 7, 1, 5]]
+matrix_2 = [[2, 9, 0, 2], [3, 4, 7, 6]]
+
+answer_matrix = []
+for i in range(len(matrix_1)):
+    row = [0] * len(matrix_1[0])  
+    answer_matrix.append(row)
+
+print("answer_matrix (нули):")
+for row in answer_matrix:
+    print(row)
+
+for i in range(len(matrix_1)):
+    for j in range(len(matrix_1[0])):
+        answer_matrix[i][j] = matrix_1[i][j] * matrix_2[i][j]
+
+print("\nРезультат умножения matrix_1 и matrix_2:")
+for row in answer_matrix:
+    print(row)
+
+print("\nСуммы строк:")
+for i, row in enumerate(answer_matrix):
+    row_sum = sum(row)
+    print(f"{row} сумма строки: {row_sum}")
+#3 task
+fruits = [['Banana', 'apple'], ['apricot', 'Avocado'], ['lime', 'Lemon'], ['Mango', 'grapes']]
+
+print("Все элементы с заглавной буквы:")
+for row in fruits:
+    for fruit in row:
+        if fruit[0].isupper():  
+            print(fruit)
+#4 task
+random_elements = [
+    ['toy', 'bee', 'cheese', 'ear'],
+    [False, 'word', '0110110', 10],
+    ['happiness', '(J *D)', 'luck', None],
+    ['car', '<- code ->', 4.7, True]
+]
+
+print("Каждый второй элемент (элементы с нечётными индексами):")
+for row_index, row in enumerate(random_elements):
+    print(f"Строка {row_index}:", end=" ")
+    for elem_index, element in enumerate(row):
+        if elem_index % 2 == 1:
+            print(element, end=" ")
+    print()
+#5 task
+rows = int(input("Введите количество строк: "))
+
+cols = int(input("Введите количество столбцов: "))
+
+matrix = []
+
+for i in range(rows): 
+    row = []  
+    for j in range(cols):  
+        value = int(input(f"Введите значение элемента [{i}][{j}]: "))
+        row.append(value) 
+    matrix.append(row)
+
+print("\nВаш двумерный массив:")
+for row in matrix:
+    print(row)
