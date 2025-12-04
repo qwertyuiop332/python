@@ -1,0 +1,57 @@
+#1 task
+first_num = 9
+second_num = 7.8
+my_str = "start"
+print(first_num, second_num, my_str)
+first_num = 5.2
+print(first_num, type(first_num))
+third_num = first_num + second_num
+print(third_num, type(third_num))
+first_num += 5
+second_num += first_num
+print(first_num, second_num)
+second_num = int(second_num)
+print(first_num, second_num)
+my_str += "stop"
+print(my_str)
+my_str_multiplied = my_str * 5
+print(my_str_multiplied)
+#2 task
+path = "C:\\Users\\WainAdmin\\Desktop\\programs"
+print(path)
+path += "\\game.exe"
+print(path)
+path = "C:\\Users\\WainAdmin\\Desktop\\files"
+path += "\\picture.png"
+print(path)
+path = "C:\\Games\\city simulator"
+path = path * 2
+print(f"Error path: {path}")
+#3 task
+num_1 = 7
+num_2 = 10
+num_3 = 4
+sum_1 = num_1 + num_2 + num_3
+print(f"Сумма всех чисел: {sum_1}")
+num_2 = 7.9
+num_3 = 21.3
+num_1 = float(num_1)
+sum_2 = num_1 + num_2 + num_3
+print(f"Сумма всех чисел: {sum_2}")
+num_1 = 13.0
+num_2 = 4
+num_3 = 2
+product = num_1 * num_2 * num_3
+print(f"Произведение всех чисел: {product}")
+division_result = (num_1 / num_2) / num_3
+print(f"Деление: {division_result}")
+num_1 = 2
+num_2 = 3
+num_3 = 4
+power_result = num_1 ** (num_2 ** num_3)
+print(f"Числа в степени: {power_result}")
+num_1 = 2
+num_2 = 3
+num_3 = 4
+result_16 = (4*num_1 + num_1) + (num_2 + 67) - (num_3 + 32)
+print(f"Результат: {result_16}")
