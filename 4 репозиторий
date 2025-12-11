@@ -1,0 +1,417 @@
+#variant 1
+#task 1
+num = int(input("Введите целое число: "))
+
+if num < 0:
+    num = -num
+    print(num)
+elif num == 0:
+    num = 1
+    print(num)
+else:
+    print(num)
+#task 2
+text = input("Введите строку: ")
+
+if '.' in text or ',' in text:
+    print(True)
+else:
+    print(False)
+#task 3
+num1 = int(input("Введите первое число: "))
+num2 = int(input("Введите второе число: "))
+
+if num1 % 3 == 0 and num2 % 3 == 0:
+    print(True)
+elif num1 % 3 == 0 or num2 % 3 == 0:
+    print("Одно число делится на 3")
+else:
+    print(False)
+#variant 2
+#task 1
+num = int(input("Введите число: "))
+
+if num > 100:
+    print("*")
+elif num > 0:
+    print("*" * num)
+#task 2
+str1 = input("Введите первую строку: ")
+str2 = input("Введите вторую строку: ")
+
+print(str1 == str2)
+#task 3
+r = int(input("Введите значение r (0-255): "))
+g = int(input("Введите значение g (0-255): "))
+b = int(input("Введите значение b (0-255): "))
+
+if r == 0 and g == 0 and b == 0:
+    print("Чёрный цвет")
+elif r == 255 and g == 255 and b == 255:
+    print("Белый цвет")
+elif r == 255 and g == 0 and b == 0:
+    print("Красный цвет")
+elif g == 255 and r == 0 and b == 0:
+    print("Зелёный цвет")
+elif b == 255 and r == 0 and g == 0:
+    print("Синий цвет")
+else:
+    print("Нет цвета")
+#variant 3
+#task 1
+num = int(input("Введите число: "))
+
+if num > 0:
+    print(f"{num - 1}, {num}, {num + 1}")
+else:
+    num = 1
+    print(f"{num - 1}, {num}, {num + 1}")
+#task 2
+filename = input("Введите имя файла с расширением: ")
+
+if '.' in filename:
+    extension = filename.split('.')[-1].lower()
+    
+    if extension == 'doc':
+        print("Word file")
+    elif extension == 'py':
+        print("Python file")
+    elif extension == 'txt':
+        print("Text file")
+    else:
+        print("Неизвестное расширение")
+else:
+    print("Файл без расширения")
+#task 3
+a = float(input("Введите первую сторону треугольника: "))
+b = float(input("Введите вторую сторону треугольника: "))
+c = float(input("Введите третью сторону треугольника: "))
+
+if a <= 0 or b <= 0 or c <= 0:
+    print("Стороны треугольника должны быть положительными числами")
+elif a + b <= c or a + c <= b or b + c <= a:
+    print("Такой треугольник не существует")
+else:
+    if a == b == c:
+        print("Равносторонний треугольник")
+    elif a == b or a == c or b == c:
+        print("Равнобедренный треугольник")
+    else:
+        print("Разносторонний треугольник")
+#variant 4
+#task 1
+text = 'important information in one line'
+letter = input("Введите букву для проверки: ")
+
+print(letter in text)
+#task 2
+side1 = float(input("Введите первую сторону: "))
+side2 = float(input("Введите вторую сторону: "))
+
+if side1 <= 0 or side2 <= 0:
+    print("Стороны должны быть положительными числами")
+else:
+    area = side1 * side2
+    
+    if side1 == side2:
+        print(f"Квадрат, площадь = {area}")
+    else:
+        print(f"Прямоугольник, площадь = {area}")
+#task 3
+mood = input("Как дела? ").lower()
+
+good_responses = ["хорошо", "нормально", "отлично"]
+bad_responses = ["плохо", "не очень", "..."]
+
+if mood in good_responses:
+    print("💋")
+#variant 5
+#task 1
+num1 = float(input("Введите первое число: "))
+num2 = float(input("Введите второе число: "))
+
+if num1 > num2:
+    result = num1 ** num2
+    print(f"{num1}^{num2} = {result}")
+elif num2 > num1:
+    result = num2 ** num1
+    print(f"{num2}^{num1} = {result}")
+else:
+    result = num1 + num2
+    print(f"Числа равны, их сумма: {result}")
+#task 2
+new_message = "Hello! How are you?"
+
+response = input("Введите ваш ответ: ")
+
+if response and new_message:
+    if response[0] == new_message[0]:
+        print(True)
+    else:
+        print(False)
+else:
+    print("Одна из строк пустая")
+#task 3
+segment1 = float(input("Введите длину первого отрезка: "))
+segment2 = float(input("Введите длину второго отрезка: "))
+
+if segment1 <= 0 or segment2 <= 0:
+    print("Длины отрезков должны быть положительными числами")
+else:
+    if segment1 > segment2:
+        difference = segment1 - segment2
+        print(f"Первый отрезок длиннее на {difference}")
+    elif segment2 > segment1:
+        difference = segment2 - segment1
+        print(f"Второй отрезок длиннее на {difference}")
+    else:
+        print("Отрезки равны")
+#variant 6
+#task 1
+text = input("Введите строку: ")
+
+if len(text) > 0: 
+    if text[0] == text[-1]:
+        print(True)
+    else:
+        print(False)
+else:
+    print("Строка пустая")
+#task 2
+num = float(input("Введите число: "))
+
+if num % 2 == 0 and num % 3 == 0:
+    result = num ** 3
+    print(f"Число кратно 2 и 3, {num}³ = {result}")
+elif num % 2 == 0:
+    result = num ** 2
+    print(f"Число кратно 2, {num}² = {result}")
+elif num % 3 == 0:
+    result = num ** 3
+    print(f"Число кратно 3, {num}³ = {result}")
+else:
+    result = num * 100
+    print(f"Число не кратно 2 или 3, {num} * 100 = {result}")
+#task 3
+num1 = float(input("Введите первое число: "))
+num2 = float(input("Введите второе число: "))
+
+if num1 < 0 and num2 < 0:
+    print(False)
+elif num1 < 0:
+    num1 += 1000
+    print(f"Первое число отрицательное: {num1 - 1000} + 1000 = {num1}")
+    print(f"Второе число: {num2}")
+elif num2 < 0:
+    num2 += 1000
+    print(f"Первое число: {num1}")
+    print(f"Второе число отрицательное: {num2 - 1000} + 1000 = {num2}")
+else:
+    print(True)
+#variant 7
+#task 1
+text = input("Введите строку: ")
+
+if text:
+    last_char = text[-1].lower()
+    
+    if last_char in ['я', 'и', 'е', 'ю']:
+        print(True)
+    else:
+        print(False)
+else:
+    print("Строка пустая")
+#task 2
+a = float(input("Введите первую сторону треугольника: "))
+b = float(input("Введите вторую сторону треугольника: "))
+c = float(input("Введите третью сторону треугольника: "))
+
+if a <= 0 or b <= 0 or c <= 0:
+    print(False)
+elif a + b > c and a + c > b and b + c > a:
+    print(True)
+else:
+    print(False)
+#task 3
+num = int(input("Введите число: "))
+last_digit = abs(num) % 10
+
+if last_digit == 0:
+    result = num ** 10
+    print(f"Последняя цифра 0: {num}¹⁰ = {result}")
+elif last_digit == 1:
+    remainder = num % 3
+    print(f"Последняя цифра 1: {num} % 3 = {remainder}")
+elif last_digit == 2:
+    result = num // 2
+    print(f"Последняя цифра 2: {num} // 2 = {result}")
+else:
+    result = num ** 2
+    print(f"Последняя цифра {last_digit} >= 3: {num}² = {result}")
+#variant 8
+#task 1
+password = input("Введите пароль: ")
+
+if len(password) < 8 or password == "qwerty123":
+    print(False)
+else:
+    print(True)
+#task 2
+pc_number = 777
+
+num1 = float(input("Введите первое число: "))
+num2 = float(input("Введите второе число: "))
+
+if (num1 < pc_number < num2) or (num2 < pc_number < num1):
+    print(True)
+else:
+    print(False)
+#task 3
+lamp_1 = 0
+lamp_2 = 0
+
+choice = input("Какую лампочку зажечь? ")
+
+if choice == "1":
+    lamp_1 = 1
+    print(f"Лампочка 1 зажжена: lamp_1 = {lamp_1}")
+elif choice == "2":
+    lamp_2 = 1
+    print(f"Лампочка 2 зажжена: lamp_2 = {lamp_2}")
+else:
+    print("Обе лампочки не горят")
+    print(f"lamp_1 = {lamp_1}, lamp_2 = {lamp_2}")
+#variant 9
+#task 1
+switch_1 = False
+switch_2 = False
+
+answer = input("Включить? ").lower()
+
+if answer == "да":
+    switch_1 = True
+    switch_2 = True
+    print("Всё включено")
+    print(f"switch_1 = {switch_1}, switch_2 = {switch_2}")
+else:
+    print(f"switch_1 = {switch_1}, switch_2 = {switch_2}")
+#task 2
+num = int(input("Введите число: "))
+
+if num > 0:
+    if num % 2 == 0:
+        print(f"{True}, 'even'")
+    else:
+        print(f"{True}, 'odd'")
+else:
+    print(False)
+#task 3
+text = input("Введите строку: ")
+
+if text and text[0] == '/':
+    print("ослепаю")
+else:
+    print("It's string")
+#variant 10
+#task 1
+text = input("Введите строку: ")
+length = len(text)
+
+if length == 0:
+    print(None)
+elif length <= 5:
+    print("short")
+elif 6 <= length <= 10:
+    print("normal")
+else:
+    print("long")
+#task 2
+num = int(input("Введите целое число: "))
+
+if num < 0:
+    num = 1_000_000
+    print(f"Отрицательное число заменено на: {num}")
+elif num == 0:
+    num = 2
+    result = num ** 2
+    print(f"Ноль заменён на 2: 2² = {result}")
+else:
+    result = num ** 3
+    print(f"{num}³ = {result}")
+#task 3
+runber_3 = 30
+runber_2 = 100
+
+user_num = float(input("Введите ваше число: "))
+
+if runber_3 <= user_num <= runber_2:
+    print(True)
+else:
+    print(False)
+#variant 11
+#task 1
+prog_num = 0
+
+num1 = float(input("Введите первое число: "))
+num2 = float(input("Введите второе число: "))
+
+if num1 < 0 and num2 < 0:
+    prog_num = num1 + num2
+    print(f"Оба числа отрицательные, сумма: {prog_num}")
+elif num1 > 0 and num2 > 0:
+    prog_num = num1 - num2
+    print(f"Оба числа положительные, разность: {prog_num}")
+elif (num1 < 0 and num2 > 0) or (num1 > 0 and num2 < 0):
+    print(False)
+else:
+    print("Одно из чисел равно нулю")
+#task 2
+num = int(input("Введите число: "))
+
+if num % 2 != 0:
+    num += 1
+    print(f"Число нечётное, увеличенное на 1: {num}")
+else:
+    print(True)
+#task 3
+text = input("Введите строку: ")
+
+if len(text) > 10:
+    print(text[:5])
+else:
+    print(text)
+#variant 12
+#task 1
+ru = 'a6srae8sawikowenopcry9xu+uuab4e-9a9'
+en = 'abcdefghijklmnopqrstuvwxyz'
+
+letter = input("Введите одну букву: ").lower()
+
+if letter in ru:
+    print("rus")
+elif letter in en:
+    print("eng")
+else:
+    print(None)
+#task 2
+pc_num = 10
+
+user_num = float(input("Введите ваше число: "))
+
+# Проверяем, совпадает ли число или отличается на 1
+if user_num == pc_num or user_num == pc_num - 1 or user_num == pc_num + 1:
+    print(True)
+else:
+    print(False)
+#task 3
+print('(221 - 13) * 2')
+correct_answer = (221 - 13) * 2
+
+user_answer = float(input("Введите ваш ответ: "))
+
+if user_answer == correct_answer:
+    print(True)
+elif user_answer > correct_answer:
+    print(">")
+else:
+    print("<")
